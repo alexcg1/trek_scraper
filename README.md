@@ -19,3 +19,7 @@ This converts the scripts into JSON that we can (hopefully) feed into [script bu
 ```
 python ./process.py
 ```
+
+### Using with [Script Buddy](https://github.com/cdpierse/script_buddy_v2)
+
+The above steps create 2 files. Copy both of them to script_buddy_v2/script_buddy/data - this WILL overwrite the existing data files, so you may want to back them up.

@@ -6,6 +6,7 @@ folder = './datasets/startrek_tng'
 output_filename = 'eps_101-109.txt'
 output = ''
 scripts = []
+film_text = ''
 
 script_data = []
 directories = []
@@ -26,6 +27,7 @@ for directory in os.listdir():
                 content = {"script": script, "genre": genre,
                            "source_url": source_url, "title": title}
                 script_data.append(content)
+                film_text = film_text + script
 
         except:
             print(f"{directory}/{filename} has error. Skipping")
@@ -38,3 +40,10 @@ scripts_json = json.dumps(script_data)
 os.chdir("..")
 with open("scripts.json", "w") as file:
     file.write(scripts_json)
+
+print(f"Written scripts.json")
+
+with open("film_text.txt", "w") as file:
+    file.write(film_text)
+
+print(f"Written film_text.txt")
