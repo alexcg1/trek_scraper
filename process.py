@@ -35,5 +35,6 @@ print(f"{len(script_data)} scripts processed")
 
 scripts_json = json.dumps(script_data)
 
+os.chdir("..")
 with open("scripts.json", "w") as file:
     file.write(scripts_json)
